@@ -8,16 +8,44 @@
         <link rel="stylesheet" href="./css/nav.css" />
         <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./css/grid.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
 	</head>
 	<body>
 		<nav class="nav">
-            
+            <a href="#" class="nav__logo--clickable">
+                <img src="./img/logo.png" alt="Cercle" class="nav__logo">
+            </a>
+			<input type="checkbox" id="nav__burger-checkbox" />
+			<label for="nav__burger-checkbox" class="nav__burger-label"></label>
+
+			<ul class="nav__list">
+				<li class="nav__list__item">
+					<a href="#latest-events">Latest events</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="404.html">Top rated</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="coming-soon.html">Coming soon</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="404.html">Cercle festival</a>
+                </li>
+                <li class="nav__list__item nav__list__item-searchbar">
+                    <input type="search" placeholder="Search">
+                </li>
+            </ul>
+            <a href="login.html">
+                <i class="nav__icon nav__icon-logout"></i>
+            </a>
         </nav>
 
 		<header class="header">
-            <img src="./img/logo.png" alt="">
-			<h1>Cercle Festival 2020</h1>
-            <button>Get your tickets</button>
+            <img src="./img/logo.png" alt="Cercle">
+            <h1>Cercle Festival 2020</h1>
+            <a href="404.html">
+                <button>Get your tickets</button>
+            </a>
             <div class="header__carrousel-dots">
                 <div class="dot"></div>
                 <div class="dot dot--active"></div>
@@ -28,8 +56,8 @@
 		</header>
 
 		<main>
-			<section class="section latest-events">
-				<h2>Latests events</h2>
+			<section class="section latest-events" id="latest-events">
+				<h2>Latest events</h2>
 				<div class="grid-container">
 					<a href="detail.html">
 						<article class="grid-container__item item item-kolsch">
@@ -102,11 +130,16 @@
 									N'to live set with a perfect night landscape of the city of Paris.
 								</p>
 							</div>
-							<i class="item__icon item__icon-like"></i>
+							<i class="item__icon item__icon-like-full"></i>
 						</article>
 					</a>
 				</div>
 			</section>
-		</main>
+        </main>
+        <footer class="footer">
+            <a href="#">
+                <img src="./img/logo.png" alt="Cercle">
+            </a>
+        </footer>
 	</body>
 </html>

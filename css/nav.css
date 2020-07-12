@@ -1,0 +1,139 @@
+body {
+	margin-top: var(--nav-height);
+}
+
+.nav {
+	height: var(--nav-height);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	padding: 0 80px;
+	border-bottom: 2px solid var(--color-pearl);
+	background-color: var(--color-black);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__logo {
+    height: 60px;
+    width: 60px;
+}
+
+.nav__list {
+	height: 100%;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__list__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav__list__item > a {
+	display: block;
+	height: 100%;
+	line-height: var(--nav-height);
+	padding: 0 32px;
+	transition: all 0.25s ease-in-out;
+}
+
+.nav__list__item > a:hover {
+	background-color: var(--color-pearl);
+	color: var(--color-black);
+}
+
+.nav__list__item > input {
+	height: 40px;
+	width: 250px;
+	margin-left: 32px;
+	padding: 0 8px;
+	outline: none;
+	border: 1px solid var(--color-pearl);
+	background-color: var(--color-black);
+	color: var(--color-pearl);
+}
+
+.nav__icon-logout::before {
+	content: "\ea14";
+}
+
+#nav__burger-checkbox {
+	display: none;
+}
+
+.nav__burger-label {
+	width: var(--nav-height);
+    height: var(--nav-height);
+
+    position: absolute;
+    top: 0;
+    left: 60px;
+    font-size: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+.nav__burger-label::before {
+    content: '';
+    background-color: var(--color-pearl);
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    left: 26px;
+    top: 26px;
+    box-shadow: 0 0.3em 0 0 var(--color-pearl), 0 0.6em 0 0 var(--color-pearl);
+}
+
+@media all and (max-width: 1200px) {
+
+    .nav {
+        display: flex;
+    }
+
+    .nav__burger-label {
+        display: block;
+    }
+
+    .nav__logo--clickable {
+        position: relative;
+        top: 0;
+        left: calc(50% - 30px);
+    }
+
+	.nav__list__item > a,
+	.nav__list__item-searchbar {
+		text-align: center;
+    }
+    
+    .nav__list__item-searchbar {
+        padding: 32px 0;
+    }
+
+	.nav__list {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: var(--color-black);
+        top: var(--nav-height);
+        left: 0;
+        opacity: 1;
+		transition: opacity 750ms ease-out;
+        z-index: 100;
+        flex-direction: column;
+    }
+    
+    .nav__list__item {
+        display: block;
+    }
+
+    #nav__burger-checkbox:checked ~ .nav__list {
+        display: none;
+    }    
+}

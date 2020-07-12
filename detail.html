@@ -7,9 +7,39 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/detail.css" />
         <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="stylesheet" href="./css/footer.css" />
 	</head>
 	<body>
-		<nav></nav>
+		<nav class="nav">
+            <a href="index.html" class="nav__logo--clickable">
+                <img src="./img/logo.png" alt="Cercle" class="nav__logo">
+            </a>
+			<input type="checkbox" id="nav__burger-checkbox" />
+			<label for="nav__burger-checkbox" class="nav__burger-label"></label>
+
+			<ul class="nav__list">
+				<li class="nav__list__item">
+					<a href="index.html#latest-events">Latest events</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="404.html">Top rated</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="coming-soon.html">Coming soon</a>
+				</li>
+				<li class="nav__list__item">
+					<a href="404.html">Cercle festival</a>
+                </li>
+                <li class="nav__list__item nav__list__item-searchbar">
+                    <input type="search" placeholder="Search">
+                </li>
+            </ul>
+            <a href="login.html">
+                <i class="nav__icon nav__icon-logout"></i>
+            </a>
+        </nav>
+
 		<main class="main detail">
 			<section class="section detail__section">
                 <h1>N'to</h1>
@@ -112,6 +142,11 @@
                     </a>
                 </div>
             </section>
-		</main>
+        </main>
+        <footer class="footer">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="Cercle">
+            </a>
+        </footer>
 	</body>
 </html>
