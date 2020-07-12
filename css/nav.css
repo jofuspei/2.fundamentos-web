@@ -94,7 +94,8 @@ body {
 @media all and (max-width: 1200px) {
 
     .nav {
-        display: flex;
+		display: flex;
+		padding: 0 24px;
     }
 
     .nav__burger-label {
@@ -123,7 +124,7 @@ body {
 		background: var(--color-black);
         top: var(--nav-height);
         left: 0;
-        opacity: 1;
+        opacity: 0;
 		transition: opacity 750ms ease-out;
         z-index: 100;
         flex-direction: column;
@@ -131,9 +132,13 @@ body {
     
     .nav__list__item {
         display: block;
-    }
+	}
+	
+	.nav__burger-label {
+		left: 16px;
+	}
 
     #nav__burger-checkbox:checked ~ .nav__list {
-        display: none;
+        opacity: 1;
     }    
 }

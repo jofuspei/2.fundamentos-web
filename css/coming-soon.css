@@ -1,0 +1,60 @@
+html {
+    background-image: 
+        linear-gradient(
+            to bottom,
+			rgba(17, 22, 29, 0.5),
+			rgba(17, 22, 29, 1) 85%
+		),
+        url("../img/coming-soon.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+}
+
+.coming-soon {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon__remaining {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coming-soon form {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coming-soon form  p{
+    margin: 8px 0;
+}
+
+.coming-soon form  input{
+    margin: 8px 16px;
+    height: 40px;
+    padding: 0 8px;
+    width: 80vw;
+    outline: none;
+}
+
+.coming-soon form  button{
+    margin: 8px 16px;
+}
+
+@media (min-width:768px) {
+    .coming-soon form {
+        flex-direction: row;
+    }
+    .coming-soon form  input{
+        width: unset;
+        min-width: 300px;
+        height: 56px;
+    }
+}
