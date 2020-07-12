@@ -1,0 +1,56 @@
+html {
+    background-image: 
+        linear-gradient(
+            to bottom,
+			rgba(17, 22, 29, 0.5),
+			rgba(17, 22, 29, 1) 60%
+		),
+        url("../img/detail_bg.jpeg");
+        background-size: cover;
+        background-position: top;
+}
+
+.main {
+    margin: 1rem;
+}
+
+.detail__section h2 {
+    text-align: center;
+}
+
+.detail__info p {
+    margin: 16px 0;
+}
+
+.detail__info ul {
+    font-size: 12px;
+}
+
+.related {
+    margin: 40px 0;
+}
+
+@media (min-width: 536px) {
+    .detail__info h3 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .detail-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail__video {
+        width: 60%;
+    }
+
+    .detail__info {
+        width: 35%;
+    }
+
+    .detail__info h3{
+        margin-top: 0;
+    }
+}
