@@ -4,6 +4,7 @@ html {
 
 body {
     height: 100%;
+    max-width: unset;
 }
 
 .login-container {
@@ -43,9 +44,9 @@ body {
 .login-container form a {
     margin-top: 4px;
     text-align: right;
-    text-decoration: none;
     color: var(--color-pearl);
     font-size: 12px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-weight: bolder;
 }
 
@@ -67,19 +68,46 @@ body {
     outline: none;
 }
 
+.login-container span {
+    margin-top: 16px;;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.login-container span a {
+    margin-left: 8px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
 @media (min-width: 376px) {
     body {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: 
+        linear-gradient(
+			rgba(17, 22, 29, 0.9),
+			rgba(17, 22, 29, 0.9)
+		),
+        url("../img/login_bg_1.jpeg");
+        background-size: cover;
+        background-position: center;
     }
 
     .login-container {
         max-width: 375px;
-        padding: 0 2rem 2rem 2rem;
+        padding: 0 3rem 3rem 3rem;
         box-shadow: 0px 0px 12px 1px var(--color-primary);
         border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: #151A20;
+        background-color: var(--color-black);
     }
+}
 
+@media (min-width: 768px) {
+    .login-container {
+        max-width: 455px;
+    }
 }
